@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, ButtonGroup, Container, Table } from 'reactstrap';
+import { Button, Container, Table } from 'reactstrap';
 import AppNavbar from './AppNavbar';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ const ProductList = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch('/api/products')
+    fetch('https://ecommerce.edgecloud9.com/api/products')
       .then(response => response.json())
       .then(data => {
         setProducts(data);
@@ -27,7 +27,7 @@ const ProductList = () => {
     return <tr key={product.id}>
       <td style={{whiteSpace: 'nowrap'}}>{product.name}</td>
       <td>{product.description}</td>
-      <td><img src={"/api/images/" + product.name + "/image.png"} /></td>
+      <td><img src={"https://ecommerce.edgecloud9.com/api/images/" + product.name + "/image.png"} /></td>
       <td>
           <Button size="sm" color="primary" tag={Link} to={"/products/" + product.id}>View</Button>
       </td>

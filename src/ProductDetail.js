@@ -30,7 +30,7 @@ const ProductDetail
   });
 
   useEffect(() => {
-    fetch(`/api/products/${id}`)
+    fetch(`https://ecommerce.edgecloud9.com/api/products/${id}`)
     .then(response => response.json())
     .then(data => {
        setProduct(data);
@@ -113,7 +113,7 @@ const ProductDetail
         <Form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col text-center">
-                <img src={"/api/images/" + product.name + "/image.png"} />
+                <img src={"https://ecommerce.edgecloud9.com/api/images/" + product.name + "/image.png"} />
                 <h2>{product.name}</h2>
             </div>
             <div className="col">
