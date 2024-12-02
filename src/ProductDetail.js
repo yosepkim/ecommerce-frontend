@@ -68,7 +68,7 @@ const ProductDetail
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await fetch('/api/orders', {
+    await fetch('https://ecommerce.edgecloud9.com/api/orders', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
