@@ -4,7 +4,6 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProductList from './ProductList';
 import ProductDetail from './ProductDetail';
-import ProductDetailWithInventory from './ProductDetailWithInventory';
 import OrderConfirmation from './OrderConfirmation';
 
 const App = () => {
@@ -14,7 +13,6 @@ const App = () => {
         <Route exact path="/" element={<Home/>}/>
         <Route path='/products' exact={true} element={<ProductList/>}/>
         <Route path='/products/:id' element={<ProductDetail/>}/>
-        <Route path='/products/inventory/:id' element={<ProductDetailWithInventory/>}/>
         <Route path='/order-confirmation' element={<OrderConfirmation/>}/>
       </Routes>
     </Router>
